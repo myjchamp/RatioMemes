@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #18204f;
+    font-family: 'Comfortaa', sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+.menu {
+    display: flex;
+    justify-content: flex-start; /* Alinear el navbar a la izquierda */
+    align-items: center;
+    padding: 13px 0;
+}
+
+/* Navbar */
+.navbar {
+    margin-left: 10px; /* Margen izquierdo para evitar que esté pegado al borde */
+}
+
+.navbar ul {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar ul li a {
+    color: white; /* Color blanco para todos los enlaces */
+    font-weight: 600;
+}
+
+/* Mantener el color blanco en todos los estados del enlace */
+.navbar ul li a:link,
+.navbar ul li a:visited,
+.navbar ul li a:hover,
+.navbar ul li a:active {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenido principal */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: 4px; /* Añade margen izquierdo aquí */
+}
+
+/* Contenedor para capturas de pantalla y enlaces de aplicaciones */
+.screenshots-container {
+    display: flex; /* Usar flexbox para colocar screenshots y enlaces de aplicaciones uno al lado del otro */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinear en la parte superior */
+    margin-left: 2px; /* Añade margen izquierdo aquí */
+}
+
+/* Contenedor para enlaces de aplicaciones y redes sociales */
+.app-social-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente en el centro */
+    justify-content: space-around; /* Espacio entre los elementos */
+    margin-top: 16px; /* Espacio superior */
+    gap: 40px;
+    width: 580px; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Contenedor de enlaces de aplicaciones */
+.app-links {
+    display: flex;
+    flex-direction: row; /* Mantener en columna */
+    gap: 10px;
+    align-items: flex-start; /* Alinear a la izquierda */
+}
+
+/* Ajustes para las imágenes de las apps */
+.app {
+    max-width: 140px; /* Limitar el ancho de los enlaces de aplicación */
+}
+
+.app-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Redes sociales */
+.social-media-links {
+    display: flex;
+    gap: 15px; /* Espacio entre las imágenes */
+    align-items: center; /* Alinea verticalmente las imágenes */
+}
+
+/* Ajustes para las imágenes de redes sociales */
+.social-link img {
+    width: 40px; /* Ajusta el tamaño según lo necesario */
+    height: 40px; /* Mantén las proporciones cuadradas */
+    transition: transform 0.2s; /* Añade un efecto de transición */
+}
+
+.social-link img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Capturas de pantalla */
+.screenshots {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Permitir que las capturas de pantalla se distribuyan en varias filas */
+}
+
+.screenshot img {
+    height: 560px; /* Tamaño más grande para escritorio */
+    width: auto;
+    border-radius: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .app-social-container {
+     gap: 10px;
+    width: 400px; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .social-media-links {
+        justify-content: center; /* Centrar los iconos en móviles */
+        margin: 0px 20px; /* Margen vertical y horizontal */
+    }
+
+    .screenshots {
+        justify-content: center; /* Centrar las capturas de pantalla en móviles */
+    }
+
+    .screenshot img {
+        height: 350px; /* Aumentar a 360px para hacerlas un 30% más grandes en móviles */
+        width: auto; /* Mantener la relación de aspecto */
+    }
+
+    .app-links {
+        flex-direction: column; /* Asegurarse de que se mantenga en columna en móviles */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .screenshots-container {
+        flex-direction: column; /* Cambiar a columna en móviles para evitar desbordamiento */
+    }
+}
